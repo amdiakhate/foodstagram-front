@@ -1,7 +1,18 @@
-<div class="col s12 m4">
-    <div class="card">
-        <div class="card-image">
-            <img src="{{ photo.link }}">
+<!--item-->
+<div class="entry one-fourth wow fadeInLeft">
+    <figure>
+        <img src="{{photo.link}}" alt="" />
+        <!--<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>-->
+    </figure>
+    <div class="container">
+        <!--<h2><a href="recipe.html">Thai fried rice with fruit and vegetables</a></h2>-->
+        <div class="actions">
+            <div>
+                <div class="difficulty"><i class="ico i-medium"></i><a href="#">medium</a></div>
+                <div class="likes"><i class="icon icon-arrow-up"></i><a href="#">{{photo.upvote}}</a></div>
+                <div class="comments"><i class="icon icon-arrow-down "></i><a href="recipe.html#comments">{{photo.downvote}}</a></div>
+            </div>
         </div>
     </div>
 </div>
+<!--item-->

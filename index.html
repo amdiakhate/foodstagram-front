@@ -5,23 +5,15 @@
     <title>Foodstagram</title>
     <!--<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>-->
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
+    <link rel="stylesheet" href="assets/css/fonts.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
 
 </head>
-<body ng-app="foodstagramApp">
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Foodstagram</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
+<body class="home" ng-app="foodstagramApp">
 <div class="section no-pad-bot" id="index-banner" ng-controller="headerCtrl">
     <div class="container">
         <br><br>
@@ -37,54 +29,67 @@
 
     </div>
 </div>
-<div class="container" >
-    <div class="row" ng-controller="feedCtrl">
-        <photo-block photo=photo ng-repeat="photo in photos"></photo-block>
+<main class="main" role="main" ng-controller="feedCtrl">
 
+
+    <div ng-show="loading" class="preloader">
+        <div class="spinner"></div>
     </div>
-</div>
-
-<footer class="page-footer orange">
-    <div class="container">
+    <!--wrap-->
+    <div class="wrap clearfix">
+        <!--row-->
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Company Bio</h5>
+            <!--content-->
+            <!--//cwrap-->
 
-                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
-                    our full time job. Any amount would help support and continue development on this project and is
-                    greatly appreciated.</p>
+            <!--cwrap-->
+            <div class="cwrap">
+                <header class="s-title">
+                    <h2 class="ribbon bright">Latest Foodporn</h2>
+                </header>
+
+                <!--entries-->
+                <div class="entries row">
+                    <!--item-->
+                    <photo-block photo=photo ng-repeat="photo in photos"></photo-block>
+
+                    <!--item-->
+
+                </div>
+                <!--//entries-->
+            </div>
+            <!--//cwrap-->
+
+            </section>
+            <!--//content-->
 
 
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Settings</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">Link 1</a></li>
-                    <li><a class="white-text" href="#!">Link 2</a></li>
-                    <li><a class="white-text" href="#!">Link 3</a></li>
-                    <li><a class="white-text" href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Connect</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">Link 1</a></li>
-                    <li><a class="white-text" href="#!">Link 2</a></li>
-                    <li><a class="white-text" href="#!">Link 3</a></li>
-                    <li><a class="white-text" href="#!">Link 4</a></li>
-                </ul>
-            </div>
         </div>
+        <!--//right sidebar-->
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+    <!--//wrap-->
+</main>
+<!--//main-->
+<!--//cwrap-->
+
+<!--footer-->
+<footer class="foot" role="contentinfo">
+    <div class="wrap clearfix">
+        <div class="row">
+            <div class="bottom">
+                <p class="copy">Copyright 2015 Foodstagram. All rights reserved</p>
+            </div>
         </div>
     </div>
 </footer>
+<!--//footer-->
 <!-- Compiled and minified JavaScript -->
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+<script src="assets/js/jquery.uniform.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<!--<script src="assets/js/scripts.js"></script>-->
+
 <script src="js/angular.min.js"></script>
 <script src="https://code.angularjs.org/1.4.6/angular-resource.js"></script>
 <script src="js/app.js"></script>
