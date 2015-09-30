@@ -47,12 +47,10 @@
                 <header class="s-title">
                     <h2 class="ribbon bright">Latest Foodporn</h2>
                 </header>
-
                 <!--entries-->
                 <div class="entries row">
                     <!--item-->
-                    <photo-block photo=photo ng-repeat="photo in photos"></photo-block>
-
+                    <photo-block photo=photo ng-repeat="photo in photos |tagsFilter : searchText"></photo-block>
                     <!--item-->
 
                 </div>
@@ -96,6 +94,7 @@
 <script src="js/components/header/controllers/headerController.js"></script>
 <script src="js/components/feed/directives/photo_block.js"></script>
 <script src="js/components/feed/controllers/feedController.js"></script>
+<script src="js/components/feed/filters/tags.js"></script>
 <script src="js/shared/services/photo.js"></script>
 </body>
 </html>

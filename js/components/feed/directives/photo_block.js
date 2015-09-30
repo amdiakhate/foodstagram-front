@@ -28,7 +28,14 @@ angular.module('foodstagramApp')
                         'id_photo': scope.photo.id_photo
                     }).then(
                         function (response) {
-                            scope.photo = response.data;
+                            //If we got a response we check
+                            if (response.data !== "") {
+                                scope.photo = response.data;
+                            } else {
+                                //We delete the element (that means it had more than 10 dislikes)
+                                scope.$destroy();
+                                element.hide();
+                            }
                         }
                     )
 
