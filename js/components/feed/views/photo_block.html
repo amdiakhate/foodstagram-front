@@ -1,21 +1,21 @@
 <!--item-->
-<div class="entry one-fourth wow fadeInLeft">
+<div>
     <figure>
         <img src="{{photo.link}}" alt=""/>
         <!--<figcaption><a href="recipe.html"><i class="ico i-view"></i> <span>View recipe</span></a></figcaption>-->
     </figure>
     <div class="container">
 
-        <div class="actions">
-            <div>
-                <div class="difficulty"><i class="ico i-medium"></i> </div>
-                <div class="likes"><i class="icon icon-arrow-up"></i><a href="#">{{photo.upvote}}</a></div>
-                <div class="comments"><i class="icon icon-arrow-down "></i><a
-                            href="recipe.html#comments">{{photo.downvote}}</a></div>
+        <div class="row">
+            <div class="one-half">
+                <span>  <i class="icon dislike icon-bin"></i></span>
+
             </div>
-        </div>
-        <div class="excerpt">
-            <p ng-repeat="tag in photo.tags"><a href="#" ng-click="updateSearch(tag)">#{{tag}} &nbsp;</a></p>
+            <div class="one-half">
+                <span> <i class="icon like icon-smile"></i>  </span>
+
+            </div>
+
         </div>
     </div>
 </div>

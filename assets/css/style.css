@@ -1015,3 +1015,16 @@ section.cta .button 	{float:none;margin:0 0 20px;}
 
 .quicklinks .button {width:90%;margin:0 0 15px;}
 }
+
+
+.like {
+    font-size : 50px;
+    color : green;
+    float : right;
+}
+
+.dislike {
+    font-size : 50px;
+    color : red;
+    float : left;
+}

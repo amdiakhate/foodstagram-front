@@ -8,6 +8,7 @@ angular.module('foodstagramApp').controller('feedCtrl', ['$scope', 'Photos', '$h
     $scope.page = 1;
     //No photos at the beginning
     $scope.photos = [];
+    $scope.photo = null;
 
     //This function loads the photos
     $scope.loadMore = function () {
@@ -18,6 +19,8 @@ angular.module('foodstagramApp').controller('feedCtrl', ['$scope', 'Photos', '$h
                 }
                 $scope.loading = false;
                 $scope.page++;
+
+                $scope.photo = $scope.photos.shift();
             } else {
                 $('.load-more').text('No more data');
             }
@@ -25,6 +28,17 @@ angular.module('foodstagramApp').controller('feedCtrl', ['$scope', 'Photos', '$h
         })
     };
     $scope.loadMore();
+
+    /**
+     * This function loads the next photo
+     */
+    $scope.nextPhoto = function() {
+        if ($scope.photos.length > 0) {
+            $scope.photo = $scope.photos.shift();
+        } else {
+            $scope.loadMore();
+        }
+    }
 
     //Search by clicking on tags
     $scope.updateSearch = function (tag) {
