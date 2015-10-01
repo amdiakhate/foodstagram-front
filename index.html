@@ -50,9 +50,12 @@
                 <!--entries-->
                 <div class="entries row">
                     <!--item-->
-                    <photo-block photo=photo ng-repeat="photo in photos |tagsFilter : searchText"></photo-block>
+                        <photo-block photo=photo ng-repeat="photo in photos |tagsFilter : searchText"></photo-block>
                     <!--item-->
 
+                </div>
+                <div class="quicklinks">
+                    <button class="button load-more" ng-click = "loadMore()">Load more</button>
                 </div>
                 <!--//entries-->
             </div>
@@ -90,6 +93,7 @@
 
 <script src="js/angular.min.js"></script>
 <script src="https://code.angularjs.org/1.4.6/angular-resource.js"></script>
+<script src="assets/js/ng-infinite-scroll.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/components/header/controllers/headerController.js"></script>
 <script src="js/components/feed/directives/photo_block.js"></script>
